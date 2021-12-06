@@ -1,0 +1,258 @@
+/* main */
+* {
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: poppins;
+	src: ('../font/Poppins-Light.ttf');
+}
+html{
+	scroll-behavior: smooth;
+	transition: 6s scroll-behavior ease;
+}
+body {
+	padding: 0;
+	margin: 0;
+	font-family: poppins;
+}
+img { width: 100% }
+.container {
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.flex {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-flow: wrap;
+}
+.justify-center {
+	justify-content: center;
+}
+.space-between {
+	justify-content: space-between;
+}
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: 0.4s ease;
+}
+.btn-one {
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+.btn-one:hover {
+	background: #fff;
+	color: #6266eb
+}
+.btn-two {
+	background-color: #6266eb;
+	color: #fff;
+}
+.btn-two:hover {
+	background-color: #4130bd;
+}
+.btn-block {
+	display: block;
+	text-align: center;
+}
+.card {
+	display: block;
+	overflow: hidden;
+	border: 1px solid #eee;
+	background-color: #fff;
+	border-radius: 5px;
+}
+.card-body {
+	display: block;
+	padding: 15px;
+}
+.text-center {text-align: center;}
+
+/* grid system */
+.row {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	padding-left: -15px;
+	padding-right: -15px;
+}
+
+.col-1 {width: 8.33%}
+.col-2 {width: 16.66%}
+.col-3 {width: 25%}
+.col-4 {width: 33.33%}
+.col-5 {width: 41.66%}
+.col-6 {width: 50%}
+.col-7 {width: 58.33%}
+.col-8 {width: 66.66%}
+.col-9 {width: 75%}
+.col-10 {width: 83.33%}
+.col-11 {width: 91.66%}
+.col-12 {width: 100%}
+[class*='col-']{padding: 0 15px; min-height: 1px;}
+
+/* layout */
+#header {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+#header .floating {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 5px 0;
+	padding: 10px 20px;
+	box-shadow: 0px 5px 5px -4px #999;
+}
+#header .floating .brand {
+	font-size: 24px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	color: #6266eb;
+}
+#header .floating .menu .menu-item {
+	margin: 0 15px;
+	text-decoration: none;
+	color: #666;
+	transition: 0.7s ease;
+}
+#header .floating .menu .menu-item:hover, #header .floating .menu .menu-item.active{
+	color: #6266eb;
+}
+#header .floating .menu-bar {
+	font-size: 25px;
+	cursor: pointer;
+	display: none;
+}
+#banner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 80px 0;
+	background-image: url('../img/code2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;  
+	/*background-attachment: fixed;*/
+}
+#banner .text {
+	color: #fff;
+	width: 90%;
+	max-width: 400px;
+	text-align: justify;
+}
+#banner .text h1 {
+	font-size: 45px;
+	font-weight: normal;
+}
+#banner .me {
+	width: 350px;
+	border-radius: 10px;
+	box-shadow: 0px 3px 10px #000;
+	transform: translate(-20px, 150px);
+}
+
+#about {
+	padding: 80px 0;
+}
+#about [class*="col-"] {
+	 padding: 15px;
+}
+#about .card .icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90px;
+	height: 90px;
+	font-size: 40px;
+	margin: 0 auto;
+	background: linear-gradient(90deg, #6266eb, #4130bd) ;
+	color: #fff;
+	border-radius: 10px;
+}
+
+#skills {
+	background-image: url(../img/code1.jpg);
+	background-attachment: scroll;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #888;
+	background-blend-mode: multiply;
+	color: #fff;
+	padding: 80px 0;
+}
+#skills .progress {
+	display: block;
+	background-color: #eeeeee20;
+	border-radius: 10px;
+	height: 10px;
+	margin: 10px 0;
+	position: relative; 
+}
+#skills .progress .progress-bar{
+	display: inline-block;
+	border-radius: 10px;
+	background-color: #4130bd;
+	height: 100%;
+	position: absolute;left: 0;top: 0;
+}
+#project {
+	padding: 80px 0;
+	background-color: #fafafa;
+}
+#project [class*='col-'] {
+	padding: 15px;
+}
+#project .card {
+	border-radius: 0 0 20px 20px;
+	box-shadow: 0px 5px 5px -5px #888;
+	transition: .4s all ease;
+}
+#project .card:hover {
+	box-shadow: 0px 5px 20px -5px #555;
+}
+#project .card .title {
+	color: #6266eb;
+}
+
+#footer {
+	padding: 80px 0;
+	background-image: url(../img/code2.jpg);
+	background-color: #6266eb;
+	background-size: cover;
+	/*background-attachment: ;*/
+	background-blend-mode: multiply;
+	color: #fff;
+}
+#footer .contact-info {
+	margin: 10px 0;
+	letter-spacing: 3px;
+}
+#footer hr {
+	border: none;
+	height: 1px;
+	background-color: #fff;
+}
+#footer .social-icon {
+	width: 40px; 
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	color: #fff;
+	font-size: 20px; text-decoration: none;
+	border-radius: 50%;
+	border: 1px solid;
+	margin: 0 5px; 
+}
+#footer .copyright a {
+	color: #fff;
+	text-decoration: none;
+}
